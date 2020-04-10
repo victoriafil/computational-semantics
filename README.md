@@ -7,7 +7,7 @@ Labs and other materials for LT2213 Computational semantics
 
 ## Table of content
 1. [Requirements](#requirements)
-2. [Start a group-lab](#start-a-group-lab)
+2. [Setting up a group assignment](#start-a-group-lab)
 3. [Working on the assignments](#working-on-the-assignments)
 4. [Submitting the work](#submitting-the-work)
 
@@ -21,7 +21,7 @@ In order to submit the assignment every member of the group should have a Github
 1. Go to https://education.github.com/ and sign up for the Student Developer Pack to get unlimited private repositories and the ability to add several collaborators. You are a "student" and you want an "individual account". Once you have completed these first steps, you are then ready to create your private GitHub repository for this class.
 1. Setup your terminal acceess with ssh-key from your local computer to your Github account. (https://github.com/settings/keys)
 
-## Start a group lab
+## Setting up a group assignment
 
 Everyone in the group is expected first to work on the assignment individually.
 The group work gives you a chance to resolve issues and to learn about alternative possible solutions.
@@ -29,7 +29,7 @@ The intention of these guidelines is to help you with working remotely.
 
 Each group should select two members, one for each of the following roles:
 - Repository manager `userm`: creates and owns a repository for the group and sets up access for other memebers and teachers.
-- Final submision admin `userf`: shares their screen when preparing and discussing the final group submission. You may alternate the role of the final submission member for different questions.
+- Final submision admin `userf`: shares their screen when preparing and discussing the final group submission. You may alternate the role of the final submission admin for different questions.
 
 
 #### Repository manager
@@ -49,10 +49,7 @@ git commit -am "initialise the submodule"
 git push
 ```
 
-#### For all members
-
-Working remotely may be challenging. It is also important that every member of the group participates and learns from working on the assignments and by interacting with the rest of the group.
-Here is a suggestion how to optimise work with your team.
+#### All members
 
 Every member should:
 
@@ -79,12 +76,18 @@ git pull
 
 ## Working on the assignments
 
-- First, try to solve the questions individually.
-- Then meet online as a group with some points for discussion prepared based on your individual work.
+### Everyday work
+
+Working remotely may be challenging. It is very important that every member of the group participates and learns from working on the assignments and by interacting with the rest of the group.
+Here is how to optimise the work with your team.
+
+- First, try to solve the questions individually by writing out your own solutions in your own version of the notebook.
+- Then meet online in the Zoom classroom as a group with some points for discussion prepared based on your individual work.
 - Let also others try to solve the question first on their own.
 - If you don't understand a question, or you if you encounter an error discuss this with other members. 
+- If you need clarification from the teachers, write your questions to the general Canvas discussion topic for Lab 1 rather than sending us individual emails. This is to ensure that if we provide additional information about the assignments, the information will be available for everyone.
 - There might be more than one solution for each question.
-- After everyone found and ran an answer for each question, you need to work on the final group submission.
+- After everyone found and ran an answer for each question, start the work on the final group submission in a separate notebook.
 - When working on this submission, one user `userf` should act as an editor and administrator.
 
 #### Administrating the final group submission
