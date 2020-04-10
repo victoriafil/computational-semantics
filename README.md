@@ -21,6 +21,9 @@ In order to submit the assignment every member of the group should have a Github
 1. Go to https://education.github.com/ and sign up for the Student Developer Pack to get unlimited private repositories and the ability to add several collaborators. You are a "student" and you want an "individual account". Once you have completed these first steps, you are then ready to create your private GitHub repository for this class.
 1. Setup your terminal acceess with ssh-key from your local computer to your Github account. (https://github.com/settings/keys)
 
+We will use Jupiter notebooks to write and run the code. To learn how to install and use Jupyter notebook, please have a look [here](http://jupyter.org/index.html).
+
+
 ## Setting up a group assignment
 
 Everyone in the group is expected first to work on the assignment individually.
