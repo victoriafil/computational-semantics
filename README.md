@@ -3,7 +3,7 @@
 Labs and other materials for LT2213 Computational semantics
 
 
-# Group works guidlines
+# Group work guidlines
 
 ## Table of content
 1. [Requirements](#requirements)
@@ -102,6 +102,6 @@ git add final
 - When you reach a consesus, update the solutions to the ones that you have agreed on.
 - You may swap the roles of `userf` between different questions. If so, the current `userf` should commit and push the solutions to Github and then the new `userf` should pull them to their computer.
 
-## Submitting the work
+## Submitting your work
 
 Please submit the assignment **as a group** through Canvas by including the URL of your Github repository and the commit id that you would like us to consider, e.g. `commit 565a042652b2ae7500eeda435a1771282563c08a`. You can find out the commit id by doing `git log`.
