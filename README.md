@@ -14,32 +14,32 @@ Labs and other materials for LT2213 Computational semantics
 
 ## Requirements
 
-In order to submit an assignment you need a private github repository with student discount:
+In order to submit the assignment every member of the group should have a Github account and at least one member will need a private Github repository with extras that are available for free to students:
 
 1. If you don't have `git`, install it on your system (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 1. Sign up for GitHub (https://github.com/).
-1. Go to https://education.github.com/ and sign up for the Student Developer Pack to get unlimited private repositories. You are a "student" and you want an "individual account". Once you have completed these first steps, you are then ready to create your private GitHub repository for this class.
-1. Setup your terminal acceess with ssh-key from your local computer to your github account. (https://github.com/settings/keys)
+1. Go to https://education.github.com/ and sign up for the Student Developer Pack to get unlimited private repositories and the ability to add several collaborators. You are a "student" and you want an "individual account". Once you have completed these first steps, you are then ready to create your private GitHub repository for this class.
+1. Setup your terminal acceess with ssh-key from your local computer to your Github account. (https://github.com/settings/keys)
 
-## Start a group-lab
+## Start a group lab
 
-Everyone in the group is expected to work on the assignment individually.
-The group work gives you more chance to solve issues and learn about other possible solutions.
-The goal of this guideline is to maximises your remote performance.
+Everyone in the group is expected first to work on the assignment individually.
+The group work gives you a chance to resolve issues and to learn about alternative possible solutions.
+The intention of these guidelines is to help you with working remotely.
 
-There are two general roles in the group that could be any member of the group:
-- Repository manager `userm`: owning the repository and sharing the admin role with others.
-- Final submision admin `userf`: sharing screen when preparing the final submission.
+Each group should select two members, one for each of the following roles:
+- Repository manager `userm`: creates and owns a repository for the group and sets up access for other memebers and teachers.
+- Final submision admin `userf`: shares their screen when preparing and discussing the final group submission. You may alternate the role of the final submission member for different questions.
 
 
 #### Repository manager
 
-- Choose one person as repository manager: `userm`
-- `userm` creates a private github repository. (Initialise with README, and ignore Python) 
-- The repository name should be `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number).
-- Add all group members and all course instructors (`adamlek`, `mmehdig`, `sdobnik`) as collaborators with Admin role in the repository settings.
+- Choose one person as a repository manager (`userm`).
+- `userm` creates a private github repository. (Initialise with README and ignore Python). 
+- The repository's name should follow the following convention: `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number).
+- In the repositories `Settings` add all group members and all course instructors (`adamlek`, `mmehdig`, `sdobnik`) as collaborators with the Admin role.
 (https://github.com/userm/lt2213-lab-x-group-y/settings/access)
-- `userm` adds the lab matterial as a module in your repository.
+- `userm` should then add the lab material from our repository as a module to your repository.
 In the terminal:
 ```
 git clone git@github.com:userm/lt2213-lab-x-group-y
@@ -51,58 +51,57 @@ git push
 
 #### For all members
 
-Working remotely is challenging. Each member of the group must be able to practice and learn when working on the lab assignments.
-The following guidline is a suggestion for maximising the accessibility of everyone in the team.
+Working remotely may be challenging. It is also important that every member of the group participates and learns from working on the assignments and by interacting with the rest of the group.
+Here is a suggestion how to optimise work with your team.
 
-All members should follow these steps:
+Every member should:
 
 - Clone from the group repository. In the terminal:
 ```
 git clone git@github.com:userm/lt2213-lab-x-group-y
 cd lt2213-lab-x-group-y
 ```
-- Create a copy of the problem-set of the lab in the root under your username. On your terminal:
+- Create a copy of the problem-set folder containg the lab in the root of ther group repository and name it with your username. In the terminal:
 ```
 cp -R computational-semantics/problem-set-#/ <username>
 ```
-- Share your work with others by add and commit in the repository:
+- Share your work with others by adding and committing your files to the repository:
 ```
 git add <username>
 git commit -m "message about what you are committing here."
 git pull 
 git push
 ```
-- Update your repository with pull command:
+- Check for updates by updating your repository with the pull command:
 ```
 git pull 
 ```
 
 ## Working on the assignments
 
-- Try to solve problems individually.
-- As a group we recommend getting online at the same time but focus on your individual work.
-- If you don't understand a question, or you if you encounter an error share you question and experience with other members. 
-- Let others also try to solve the question on their own.
-- There might be more than one answer for each question.
-- After everyone found and run an answer under each question, you need a final submission.
-- When working on the final version, one user `userf` can administer the session by sharing the screen.
+- First, try to solve the questions individually.
+- Then meet online as a group with some points for discussion prepared based on your individual work.
+- Let also others try to solve the question first on their own.
+- If you don't understand a question, or you if you encounter an error discuss this with other members. 
+- There might be more than one solution for each question.
+- After everyone found and ran an answer for each question, you need to work on the final group submission.
+- When working on this submission, one user `userf` should act as an editor and administrator.
 
 #### Administrating the final group submission
 
-The admin user for the final submission, `userf`, is going to share screen with others while working on the final version.
+The admin user for the final submission, `userf`, is responsible for editing the file and managing the online meeting while working on the final version. In particular they should,
 
-Here is a guidline for `userf`.
-- Share your screen with other team members.
-- The final version must be constructed based on the contribution of everyone.
-- Create a final copy from your own work:
+- Share their screen with other team members.
+- The group version should be constructed in a way that it consists of contributions of everyone.
+- Make a copy of their notebook and name then final:
 ```
 cp -R userf final
+git add final
 ```
-- Let one of the members give you guidance and you follow their commands. 
-- Change the role of the lead time by time. When you, `userf`, is leading your own work try to narrate what you are about to do.
+- Initiate a discussion how to modify these solutions given the contributions of each member.
+- When you reach a consesus, update the solutions to the ones that you have agreed on.
+- You may swap the roles of `userf` between different questions. If so, the current `userf` should commit and push the solutions to Github and then the new `userf` should pull them to their computer.
 
 ## Submitting the work
 
-Each individual member must submit in the Canvas. You can submit your work by sending a link to your group repository.
-
-
+Please submit the assignment **as a group** through Canvas by including the URL of your Github repository and the commit id that you would like us to consider, e.g. `commit 565a042652b2ae7500eeda435a1771282563c08a`. You can find out the commit id by doing `git log`.
