@@ -93,7 +93,7 @@ The admin user for the final submission, `userf`, is responsible for editing the
 
 - Share their screen with other team members.
 - The group version should be constructed in a way that it consists of contributions of everyone.
-- Make a copy of their notebook and name then final:
+- Make a copy of their notebook and name it final:
 ```
 cp -R userf final
 git add final
