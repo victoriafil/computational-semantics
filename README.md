@@ -58,7 +58,7 @@ Every member should:
 
 - Clone from the group repository. In the terminal:
 ```
-git clone git@github.com:userm/lt2213-lab-x-group-y
+git clone --recurse-submodules git@github.com:userm/lt2213-lab-x-group-y
 cd lt2213-lab-x-group-y
 ```
 - Create a copy of the problem-set folder containg the lab in the root of ther group repository and name it with your username. In the terminal:
