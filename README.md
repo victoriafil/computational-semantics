@@ -38,8 +38,9 @@ Each group should select two members, one for each of the following roles:
 #### Repository manager
 
 - Choose one person as a repository manager (`userm`).
-- `userm` creates a private github repository. (Initialise with README and ignore Python). 
+- `userm` creates a private github repository. (Initialise with README and ignore Python).
 - The repository's name should follow the following convention: `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number).
+![Create Private Repository](images/screen_shot.png)
 - In the repositories `Settings` add all group members and all course instructors (`adamlek`, `mmehdig`, `sdobnik`) as collaborators with the Admin role.
 (https://github.com/userm/lt2213-lab-x-group-y/settings/access)
 - `userm` should then add the lab material from our repository as a module to your repository.
@@ -69,12 +70,12 @@ cp -R computational-semantics/problem-set-#/ <username>
 ```
 git add <username>
 git commit -m "message about what you are committing here."
-git pull 
+git pull
 git push
 ```
 - Check for updates by updating your repository with the pull command:
 ```
-git pull 
+git pull
 ```
 
 ## Working on the assignments
@@ -87,7 +88,7 @@ Here is how to optimise the work with your team.
 - First, try to solve the questions individually by writing out your own solutions in your own version of the notebook.
 - Then meet online in the Zoom classroom as a group with some points for discussion prepared based on your individual work.
 - Let also others try to solve the question first on their own.
-- If you don't understand a question, or you if you encounter an error discuss this with other members. 
+- If you don't understand a question, or you if you encounter an error discuss this with other members.
 - If you need clarification from the teachers, write your questions to the general Canvas discussion topic for Lab 1 rather than sending us individual emails. This is to ensure that if we provide additional information about the assignments, the information will be available for everyone.
 - There might be more than one solution for each question.
 - After everyone found and ran an answer for each question, start the work on the final group submission in a separate notebook.
