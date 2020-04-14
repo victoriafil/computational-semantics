@@ -44,15 +44,14 @@ Each group should select two members, one for each of the following roles:
    - The repository's name should follow the following convention: `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number). As in the picture:
 ![Create Private Repository](images/screen_shot_create.png)
 - In the repositories `Settings` add all group members and all course instructors (`adamlek`, `mmehdig`, `sdobnik`) as collaborators with the Admin role.
-`https://github.com/<userm>/<lt2213-lab-x-group-y>/settings/access`
 ![Settings](images/screen_shot_settings.png)
 ![Manage access](images/screen_shot_manage_access.png)
 ![Manage access add sdobnik](images/screen_shot_manage_access_sdobnik.png)
 - `userm` should then add the lab material from our repository as a module to your repository.
 In the terminal:
 ```
-git clone git@github.com:userm/lt2213-lab-x-group-y
-cd lt2213-lab-x-group-y
+git clone git@github.com:<userm>/<lt2213-lab-x-group-y>
+cd <lt2213-lab-x-group-y>
 git submodule add https://github.com/sdobnik/computational-semantics
 git commit -am "initialise the submodule"
 git push
@@ -64,8 +63,8 @@ Every member should:
 
 - Clone from the group repository. In the terminal:
 ```
-git clone git@github.com:userm/lt2213-lab-x-group-y
-cd lt2213-lab-x-group-y
+git clone git@github.com:<userm>/<lt2213-lab-x-group-y>
+cd <lt2213-lab-x-group-y>
 ```
 - Create a copy of the problem-set folder containg the lab in the root of ther group repository and name it with your username. In the terminal:
 ```
@@ -101,13 +100,13 @@ Here is how to optimise the work with your team.
 
 #### Administrating the final group submission
 
-The admin user for the final submission, `userf`, is responsible for editing the file and managing the online meeting while working on the final version. In particular they should,
+The admin user for the final submission, for example `userf`, is responsible for editing the file and managing the online meeting while working on the final version. In particular they should,
 
 - Share their screen with other team members.
 - The group version should be constructed in a way that it consists of contributions of everyone.
 - Make a copy of their notebook and name it final:
 ```
-cp -R userf final
+cp -R <userf> final
 git add final
 ```
 - Initiate a discussion how to modify these solutions given the contributions of each member.
