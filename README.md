@@ -31,18 +31,23 @@ The group work gives you a chance to resolve issues and to learn about alternati
 The intention of these guidelines is to help you with working remotely.
 
 Each group should select two members, one for each of the following roles:
-- Repository manager `userm`: creates and owns a repository for the group and sets up access for other memebers and teachers.
-- Final submision admin `userf`: shares their screen when preparing and discussing the final group submission. You may alternate the role of the final submission admin for different questions.
+- Repository manager (for example `userm`): creates and owns a repository for the group and sets up access for other memebers and teachers.
+- Final submission admin (for example `userf`): shares their screen when preparing and discussing the final group submission. You may alternate the role of the final submission admin for different questions.
 
 
 #### Repository manager
 
-- Choose one person as a repository manager (`userm`).
-- `userm` creates a private github repository. (Initialise with README and ignore Python).
-- The repository's name should follow the following convention: `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number).
-![Create Private Repository](images/screen_shot.png)
+- Choose one person as a repository manager (For example `userm`).
+- `userm` creates a private github repository. (Initialise with README and ignore Python):
+   - [Follow this link.](https://github.com/new)
+  ![Start Creating Repository](images/screen_shot_create_start.png)
+   - The repository's name should follow the following convention: `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number). As in the picture:
+![Create Private Repository](images/screen_shot_create.png)
 - In the repositories `Settings` add all group members and all course instructors (`adamlek`, `mmehdig`, `sdobnik`) as collaborators with the Admin role.
-(https://github.com/userm/lt2213-lab-x-group-y/settings/access)
+`https://github.com/<userm>/<lt2213-lab-x-group-y>/settings/access`
+![Settings](images/screen_shot_settings.png)
+![Manage access](images/screen_shot_manage_access.png)
+![Manage access add sdobnik](images/screen_shot_manage_access_sdobnik.png)
 - `userm` should then add the lab material from our repository as a module to your repository.
 In the terminal:
 ```
