@@ -40,13 +40,17 @@ Each group should select two members, one for each of the following roles:
 - Choose one person as a repository manager (For example `userm`).
 - `userm` creates a private github repository. (Initialise with README and ignore Python):
    - [Follow this link.](https://github.com/new)
-  ![Start Creating Repository](images/screen_shot_create_start.png)
+  <img src="images/screen_shot_create_start.png" width="50%">
    - The repository's name should follow the following convention: `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number). As in the picture:
-![Create Private Repository](images/screen_shot_create.png)
+<img src="images/screen_shot_create.png" width="50%">
 - In the repositories `Settings` add all group members and all course instructors (`adamlek`, `mmehdig`, `sdobnik`) as collaborators with the Admin role.
-![Settings](images/screen_shot_settings.png)
-![Manage access](images/screen_shot_manage_access.png)
-![Manage access add sdobnik](images/screen_shot_manage_access_sdobnik.png)
+
+<img src="images/screen_shot_settings.png" width="50%">
+
+<img src="images/screen_shot_manage_access.png" width="50%">
+
+<img src="images/screen_shot_manage_access_sdobnik.png" width="50%">
+
 - `userm` should then add the lab material from our repository as a module to your repository.
 In the terminal:
 ```
