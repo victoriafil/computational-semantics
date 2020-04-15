@@ -40,9 +40,13 @@ Each group should select two members, one for each of the following roles:
 - Choose one person as a repository manager (For example `userm`).
 - `userm` creates a private github repository. (Initialise with README and ignore Python):
    - [Follow this link.](https://github.com/new)
+   
   <img src="images/screen_shot_create_start.png" width="50%">
+  
    - The repository's name should follow the following convention: `lt2213-lab-x-group-y` (`x` for the lab number and `y` for group number). As in the picture:
+   
 <img src="images/screen_shot_create.png" width="50%">
+
 - In the repositories `Settings` add all group members and all course instructors (`adamlek`, `mmehdig`, `sdobnik`) as collaborators with the Admin role.
 
 <img src="images/screen_shot_settings.png" width="50%">
