@@ -7,7 +7,7 @@ Labs and other materials for LT2213 Computational semantics
 
 ## Table of content
 1. [Requirements](#requirements)
-2. [Setting up a group assignment](#start-a-group-lab)
+2. [Setting up a group assignment](#setting-up-a-group-assignment)
 3. [Working on the assignments](#working-on-the-assignments)
 4. [Submitting the work](#submitting-the-work)
 
