@@ -1,9 +1,9 @@
-import re 
+import re
 from IPython.display import display, Markdown, Latex
 def _to_latex(text):
     text = str(text)
-    text = text.replace('\\', "\lambda ").replace('exists', '\\exists').replace('all', '\\forall')
-    text = text.replace('->', '\\to').replace('&', '\land').replace('|', '\lor').replace(' ', '\ ')
+    text = text.replace('\\', r"\lambda ").replace('exists', r'\exists').replace('all', r'\forall')
+    text = text.replace('<->', r'\leftrightarrow').replace('->', r'\rightarrow').replace('&', r'\land').replace('|', r'\lor').replace(' ', r'\ ')
     text = re.sub('z(\d+)', 'z_{\g<1>}', text)
     return text
 
@@ -79,6 +79,6 @@ def _repr_png_(tree):
         os.remove(in_path)
         os.remove(out_path)
         return base64.b64encode(res).decode()
-    
+
 def display_tree(tree):
     return display(Markdown(f"<img src=\"data:image/png;base64,{_repr_png_(tree)}\">"))
