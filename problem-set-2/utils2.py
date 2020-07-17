@@ -62,6 +62,49 @@ DTV[NUM=pl,SEM=<\Y X x.X(\z.Y(\y.give(x,y,z)))>,TNS=pres] -> 'give'
 syntax_notv = FeatureGrammar.fromstring(fcfg_string_notv)
 syntax = FeatureGrammar.fromstring(fcfg_string_notv + fcfg_string_tv)
 
+
+# Storage base grammar
+
+fcfg_storage = r"""
+% start S
+
+S[SEM=[CORE=<?subj(?vp)>, STORE=(?b1+?b2)]] -> NP[NUM=?n,SEM=[CORE=?subj, STORE=?b1]] VP[NUM=?n,SEM=[CORE=?vp, STORE=?b2]]
+
+Nom[NUM=?n,SEM=?s] -> N[NUM=?n,SEM=?s]
+
+VP[NUM=?n,SEM=?s] -> IV[NUM=?n,SEM=?s]
+VP[NUM=?n,SEM=[CORE=<?v(?obj)>, STORE=(?b1+?b2)]] -> TV[NUM=?n,SEM=[CORE=?v, STORE=?b1]] NP[SEM=[CORE=?obj, STORE=?b2]]
+VP[NUM=?n,SEM=[CORE=<?v(?pp)(?obj)>, STORE=(?b1+?b2+?b3)]] -> DTV[NUM=?n,SEM=[CORE=?v, STORE=?b1]] NP[SEM=[CORE=?obj, STORE=?b2]] PP[+TO,SEM=[CORE=?pp, STORE=?b3]]
+
+PP[+TO, SEM=[CORE=?np, STORE=?b1]] -> P[+TO] NP[SEM=[CORE=?np, STORE=?b1]]
+
+PropN[NUM=sg,SEM=[CORE=<\P.P(angus)>, STORE=(/)]] -> 'Angus'
+PropN[NUM=sg,SEM=[CORE=<\P.P(cyril)>, STORE=(/)]] -> 'Cyril'
+PropN[NUM=sg,SEM=[CORE=<\P.P(irene)>, STORE=(/)]] -> 'Irene'
+
+Det[NUM=sg,SEM=[CORE=<\P Q.all x.(P(x) -> Q(x))>, STORE=(/)]] -> 'every'
+Det[NUM=sg,SEM=[CORE=<\P Q.exists x.(P(x) & Q(x))>, STORE=(/)]] -> 'a'
+
+N[NUM=sg,SEM=[CORE=<\x.library(x)>, STORE=(/)]] -> 'library'
+N[NUM=sg,SEM=[CORE=<\x.girl(x)>, STORE=(/)]] -> 'girl'
+N[NUM=sg,SEM=[CORE=<\x.boy(x)>, STORE=(/)]] -> 'boy'
+N[NUM=sg,SEM=[CORE=<\x.book(x)>, STORE=(/)]] -> 'book'
+
+IV[NUM=sg,SEM=[CORE=<\x.smile(x)>, STORE=(/)],TNS=pres] -> 'smiles' 
+
+TV[NUM=sg,SEM=[CORE=<\X x.X(\y.read(x,y))>, STORE=(/)],TNS=pres] -> 'reads'
+
+DTV[NUM=sg,SEM=[CORE=<\Y X x.X(\z.Y(\y.give(x,y,z)))>, STORE=(/)],TNS=pres] -> 'gives'
+
+P[+to] -> 'to'
+
+NP[NUM=?n,SEM=[CORE=<\P.P(@x)>, STORE=(<bo(?np, @x)>+?b1)]] -> PropN[NUM=?n,SEM=[CORE=?np, STORE=?b1]]
+NP[NUM=?n,SEM=[CORE=<\P.P(@x)>, STORE=(<bo(?det(?nom), @x)>+?b1+?b2)]] -> Det[NUM=?n,SEM=[CORE=?det, STORE=?b1]] Nom[NUM=?n,SEM=[CORE=?nom, STORE=?b2]]
+"""
+
+syntax_storage = FeatureGrammar.fromstring(fcfg_storage)
+
+
 # don't change these functions
 def sem_parser(sents, syntax, verbose=False, is_cs=False):
     """
