@@ -7,8 +7,15 @@
 \usepackage{natbib}
 \usepackage[margin=25mm]{geometry}
 \usepackage{hyperref}
+\usepackage{xcolor}
 
 \renewcommand\refname{} % Removes the References title
+
+% Make links dark blue as in ACL
+
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
+\hypersetup{colorlinks=true,citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}
+
 
 \title{\normalsize \textbf{LT2313: Computational Semantics (CS)} \\ \textbf{Reading list}}
 \date{\normalsize \today}
@@ -31,8 +38,8 @@
 \nocite{*}
 
 \bibliographystyle{acl_natbib} % chicago
-%\bibliography{bibliography}
-\bibliography{reading-list,references}
+\bibliography{bibliography}
+%\bibliography{reading-list,references}
 
 \end{document}
 
