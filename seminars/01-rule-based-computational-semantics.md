@@ -14,33 +14,6 @@
 * Overall, what aspects of natural language semantics are treated well with these methods and what aspects are not captured?
 * What NLP applications benefit from this approach?
 
-### Points from the class
-
-* Efficiency of databases and queries
-  * we need a complete database, understand the problem
-  * separation of data and representations and language; SQL language is connected to the storage; portability of systems
-  * are relational databases enough?
-* Translating NLP to logic, limitations of logic to cover linguistic constructions
-  * I think Gothenburg is... I think that P where P is a proposition
-  * Natural language is not "grammatical": sarcasm, figurative language, idioms (sequence of words or a single word); lexical semantics is not dealt with; deictic representations, spatial relations
-  * Why FOL? Tools available.
-  * Logic and AI: SHRDLU, Winograd, <https://en.wikipedia.org/wiki/SHRDLU>
-  * NLU and NLG
-  * We don't say everything we mean? Language in context
-* Ambiguities: lexical ambiguities, can they be solved by logic; pragmatics and slang
-  * resolving lexical ambiguities: resolving through word contexts, e.g. rock (music), rock (stone); also depending on the context: in the Spotify app
-  * words in different social contexts: changing language; updated contexts in the database?
-* Lambda calculus: how to do it for non-European languages and dialects
-  * ambiguity
-  * apply to corpora and study semantic relations in spoken language
-  * cross-linguistic semantic representations
-* Computational tools for reasoning and how do they relate to human reasoning?
-* Cooper storage?
-* From logic to applications:
-  * a QA system for family members
-  * solving logic riddles, games, <https://www.uni-bamberg.de/en/sme/teaching/bambirds/>
-  * tools and representations: what is good for different tasks? Where do we find resources?
-
 ### Simon's notes
 
 * A lot is hard-wired into the grammar; composing semantic meaning parallel to composition of syntactic constituents
@@ -56,6 +29,8 @@
   all x. (man(x) -> -woman(x))
   exists y. all x. (woman(x) -> (x = y))
   Goal: love(adam,eve)
+  
+  
   
   ```
 * Quantifier scope ambiguity: Everyone likes someone
@@ -85,7 +60,56 @@
   * intensional constructions involving, for example, verbs like *may* and *believe*.
   * (i) and (ii) can be expressed in FOL; (iii) and (iV) require extensions
 
-### Previous discussions, 2021-04-01
+### From the class, VT23
+
+* Program complexity for rule-based systems and processing time;
+  * but training ANNs is also time consuming
+  * humans writing grammars also take time
+  * <https://en.wikiquote.org/wiki/Fred_Jelinek>
+* Granulairty of representations required
+* Interpretability
+  * sensitive applications
+* The use of formal representations
+  * context specific: sensitivity of appliations
+  * low-resource scenarios where linguistic inference is required
+  * can use rules to verify what has been learned
+* Reliance on syntactic parsing and syntax
+  * inefficient?
+  * what happenes if we encode everything in lambda calculus, the grammaer would likely be more complex
+  * allows us to map different sentences to canonical semantic representations
+  * disambiguation: syntactic and semantic explosion of readings
+* Non-compositional expressions
+  * idioms
+  * can decide the granualrity of lambda applications
+
+### From the class, VT22
+
+* Efficiency of databases and queries
+  * we need a complete database, understand the problem
+  * separation of data and representations and language; SQL language is connected to the storage; portability of systems
+  * are relational databases enough?
+* Translating NLP to logic, limitations of logic to cover linguistic constructions
+  * I think Gothenburg is... I think that P where P is a proposition
+  * Natural language is not "grammatical": sarcasm, figurative language, idioms (sequence of words or a single word); lexical semantics is not dealt with; deictic representations, spatial relations
+  * Why FOL? Tools available.
+  * Logic and AI: SHRDLU, Winograd, <https://en.wikipedia.org/wiki/SHRDLU>
+  * NLU and NLG
+  * We don't say everything we mean? Language in context
+* Ambiguities: lexical ambiguities, can they be solved by logic; pragmatics and slang
+  * resolving lexical ambiguities: resolving through word contexts, e.g. rock (music), rock (stone); also depending on the context: in the Spotify app
+  * words in different social contexts: changing language; updated contexts in the database?
+* Lambda calculus: how to do it for non-European languages and dialects
+  * ambiguity
+  * apply to corpora and study semantic relations in spoken language
+  * cross-linguistic semantic representations
+* Computational tools for reasoning and how do they relate to human reasoning?
+* Cooper storage?
+* From logic to applications:
+  * a QA system for family members
+  * solving logic riddles, games, <https://www.uni-bamberg.de/en/sme/teaching/bambirds/>
+  * tools and representations: what is good for different tasks? Where do we find resources?
+
+### From the class, VT21
 
 girl(x) & walk (x)
 
