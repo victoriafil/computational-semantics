@@ -1,4 +1,4 @@
-## 2021-03-31 Rule-based computational semantics
+## Seminar 1: Rule-based computational semantics
 
 [Analysing the meaning of sentences](https://www.nltk.org/book/ch10.html) in S. Bird, E. Klein, and E. Loper. Natural language processing with Python. O’Reilly, 2009.
 
@@ -13,6 +13,7 @@
 * Do humans also reason this way?
 * Overall, what aspects of natural language semantics are treated well with these methods and what aspects are not captured?
 * What NLP applications benefit from this approach?
+
 
 
 ### Simon's notes
@@ -30,7 +31,7 @@
   all x. (man(x) -> -woman(x))
   exists y. all x. (woman(x) -> (x = y))
   Goal: love(adam,eve)
-  
+   
   ```
 * Quantifier scope ambiguity: Everyone likes someone
   * `all x.(person(x) -> exists y.(person(y) & admire(x,y)))`
@@ -58,6 +59,30 @@
   * generalized quantifiers such as *most*;
   * intensional constructions involving, for example, verbs like *may* and *believe*.
   * (i) and (ii) can be expressed in FOL; (iii) and (iV) require extensions
+
+
+
+### From the class, VT23
+
+* Program complexity for rule-based systems and processing time;
+  * but training ANNs is also time consuming
+  * humans writing grammars also take time
+  * <https://en.wikiquote.org/wiki/Fred_Jelinek>
+* Granulairty of representations required
+* Interpretability
+  * sensitive applications
+* The use of formal representations
+  * context specific: sensitivity of appliations
+  * low-resource scenarios where linguistic inference is required
+  * can use rules to verify what has been learned
+* Reliance on syntactic parsing and syntax
+  * inefficient?
+  * what happenes if we encode everything in lambda calculus, the grammaer would likely be more complex
+  * allows us to map different sentences to canonical semantic representations
+  * disambiguation: syntactic and semantic explosion of readings
+* Non-compositional expressions
+  * idioms
+  * can decide the granualrity of lambda applications
 
 
 
@@ -89,8 +114,10 @@
   * tools and representations: what is good for different tasks? Where do we find resources?
 
 
-### From the class, 2021-04-01
 
+### From the class, VT21
+
+```
 girl(x) & walk (x)
 
 all x exits y.girl(x) & sleepy(y) -> walk(x) & likes(x,y)
@@ -108,3 +135,5 @@ F T T
 F T F
 
 T T T
+```
+
