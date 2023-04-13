@@ -1,4 +1,4 @@
-## Rule-based computational semantics
+## Seminar 1: Rule-based computational semantics
 
 [Analysing the meaning of sentences](https://www.nltk.org/book/ch10.html) in S. Bird, E. Klein, and E. Loper. Natural language processing with Python. O’Reilly, 2009.
 
@@ -13,6 +13,8 @@
 * Do humans also reason this way?
 * Overall, what aspects of natural language semantics are treated well with these methods and what aspects are not captured?
 * What NLP applications benefit from this approach?
+
+
 
 ### Simon's notes
 
@@ -29,9 +31,7 @@
   all x. (man(x) -> -woman(x))
   exists y. all x. (woman(x) -> (x = y))
   Goal: love(adam,eve)
-  
-  
-  
+   
   ```
 * Quantifier scope ambiguity: Everyone likes someone
   * `all x.(person(x) -> exists y.(person(y) & admire(x,y)))`
@@ -60,6 +60,8 @@
   * intensional constructions involving, for example, verbs like *may* and *believe*.
   * (i) and (ii) can be expressed in FOL; (iii) and (iV) require extensions
 
+
+
 ### From the class, VT23
 
 * Program complexity for rule-based systems and processing time;
@@ -81,6 +83,8 @@
 * Non-compositional expressions
   * idioms
   * can decide the granualrity of lambda applications
+
+
 
 ### From the class, VT22
 
@@ -109,8 +113,11 @@
   * solving logic riddles, games, <https://www.uni-bamberg.de/en/sme/teaching/bambirds/>
   * tools and representations: what is good for different tasks? Where do we find resources?
 
+
+
 ### From the class, VT21
 
+```
 girl(x) & walk (x)
 
 all x exits y.girl(x) & sleepy(y) -> walk(x) & likes(x,y)
@@ -128,3 +135,5 @@ F T T
 F T F
 
 T T T
+
+```
