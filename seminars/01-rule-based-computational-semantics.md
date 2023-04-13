@@ -1,4 +1,4 @@
-## 2021-03-31 Rule-based computational semantics
+## Rule-based computational semantics
 
 [Analysing the meaning of sentences](https://www.nltk.org/book/ch10.html) in S. Bird, E. Klein, and E. Loper. Natural language processing with Python. O’Reilly, 2009.
 
