@@ -14,7 +14,22 @@
 # the corpus:
 # a collection of more-or-less gothic tales from Project Gutenberg
 demo_dir = "/Users/katrinerk/Desktop/demo_corpora_mini/"
+import tqdm
 
+import spacy
+from spacy.pipeline import Sentencizer
+from spacy.lang.en import English
+sentencizer = Sentencizer()
+#nlp = English()
+nlp = spacy.load('en_core_web_sm', disable=['parser', 'tagger', 'ner',
+                                           'tok2vec', 'attribute_ruler', 'lemmatizer'])
+nlp.add_pipe("sentencizer")
+# increasing max_length because spacy has a limit and our corpus has > 150 mil tokens
+# more info below:
+'''
+ Text of length 150569647 exceeds maximum of 1000000. The parser and NER models require roughly 1GB of temporary memory per 100,000 characters in the input. This means long texts may cause memory allocation errors. If you're not using the parser or NER, it's probably safe to increase the `nlp.max_length` limit. The limit is in number of characters, so you can check whether your inputs are too long by checking `len(text)`.
+'''
+nlp.max_length = 200000000
 
 ##########
 # Preprocessing:
@@ -62,7 +77,9 @@ def do_word_count(demo_dir, numdims):
     for filename in os.listdir(demo_dir):
         if filename.endswith("txt"):
             print("reading file", filename)
-            text = open(os.path.join(demo_dir, filename)).read()
+            with open(os.path.join(demo_dir, filename)) as f:
+                text = f.read()
+            #text = open(os.path.join(demo_dir, filename)).read()
             word_count.update(preprocess(text))
             
     # keep_wordfreq is a list of (word, frequency) pairs
@@ -191,20 +208,28 @@ def make_space(demo_dir, word_index, numdims):
     # Design decision: We want to take sentence boundaries into account
     # when computing distributional representations.
     # So we need to detect sentence boundaries first.
-    sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
+    #sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
     # We iterate over the corpus files
     # and count word co-occurrences in a window of 2
     for filename in os.listdir(demo_dir):
         if filename.endswith("txt"):
             print("reading file", filename)
+            
             # read the text
-            text = open(os.path.join(demo_dir, filename)).read()
+            #text = open(os.path.join(demo_dir, filename)).read()
+            with open(os.path.join(demo_dir, filename)) as f:
+                text = f.read()
+            # 150569647 tokens
             # split the text into sentences
-            sentences = sent_detector.tokenize(text)
+            #sentences = sent_detector.tokenize(text)
+            sentences = nlp(text)
             # process one sentence at a time
-            for sentence in sentences:
-                words = preprocess(sentence)
+            # should be 1145485 sentences
+            #print('# of sentences', len(list(sentences.sents)))
+            
+            for sentence in tqdm.tqdm(sentences.sents):
+                words = preprocess(sentence.text)
 
                 # determine pairs of co-occurrences to count,
                 # and store them in the matrix
