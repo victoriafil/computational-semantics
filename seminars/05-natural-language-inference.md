@@ -35,13 +35,15 @@ For the second paper:
 
 ### Points from the class
 
-Tests the theoretical strength of the representations but what is the actual practical use? Labels are not very useful for opractical tasks.
-
-* What applications?
-  * Testing embeddings for different tasks.
-  * Building blocks for downstream tasks? Tasks: sumarisation and question answering.
-
-
+* Tests the theoretical strength of the representations but what is the actual practical use? Labels are not very useful for opractical tasks.
+  * What applications?
+  * Testing embeddings for different tasks. Tasks: sumarisation and question answering.
+  * Building blocks for downstream tasks?
+  * The way BERT is trained.
+  * Tasks: sumarisation and question answering.
+  * What does 70% accuracy on a particular label prediction tell us? Is that good for any task?
+  * Do humans actually think like this?
+  * A dog and a cat are playing hockey. Two animals are playing hockey. The system has to learn how general concepts are. How to bias the model to distinguish more general from more specific case.
 * General representations
   * The way BERT is trained: the influence of context words on the semantics of a word, the relation between one sentence and another.
   * Training objective and the structure of the model will affect what kind of representations we learn.

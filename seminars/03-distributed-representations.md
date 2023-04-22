@@ -31,7 +31,7 @@ For the second paper:
   * what are paradigmatic and syntagmatic relations in word2vec models
   * one-hot-embeddings
 * distributional embeddings are fixed (?) - distributed can be further trained?
-* +s and -s: reduction of dimensionality, adaptability for specific applications; interpretability and bias
+* \+s and -s: reduction of dimensionality, adaptability for specific applications; interpretability and bias
 * performance: the overhead of training; to train or not to train; learning vs inference
 * different kinds of embeddings: skipgram, cbow, fasttext, wordpiece, GloVe and how it related to word2vec; SVD to distributional model is dense representations
   * hello: h e l l o he el ll lo
@@ -70,7 +70,7 @@ On the Bengio et al.'s paper
 * stochastic gradient decent is used to optimiase the parameters
 * evaluation on the Brown corpus; hidden layers force better generalisation
 * recurrent neural networks are very natural way of modelling language which is sequential
-* More details in Chapter 7 and Chapter 9 of D. Jurafsky and J. H. Martin. Speech and language processing: an introduction to natural language processing, computational linguistics, and speech recognition. Third edition draft, Stanford University and University of Colorado at Boulder, December 30 2020. [https://web.stanford.edu/\\\~jurafsky/slp3/ed3book.pdf](https://web.stanford.edu/%5C\~jurafsky/slp3/ed3book.pdf)
+* More details in Chapter 7 and Chapter 9 of D. Jurafsky and J. H. Martin. Speech and language processing: an introduction to natural language processing, computational linguistics, and speech recognition. Third edition draft, Stanford University and University of Colorado at Boulder, December 30 2020. [https://web.stanford.edu/\\\~jurafsky/slp3/ed3book.pdf](https://web.stanford.edu/%5C~jurafsky/slp3/ed3book.pdf)
 
 On Ghanimifard and Dobnik's paper
 
@@ -96,4 +96,3 @@ On Ghanimifard and Dobnik's paper
   * some compositions are more difficult to learn than others, e.g. negation; some are non-sensical "either far from or next to"; perhaps dependent on the degree of the overlap of spatial templates; decomposition is perhaps more robust than composition: lesser decrease in performance with omission (not conclusive, data missing)
   * Adding distractor words makes the results only slightly weaker
   * Investigating loss and comparing it with the correlation between the predicted probabilities and spatial templates indicates that although the loss stabilises after a certain number of epochs further training still improves the correlation: this is because loss is not only expression of groundedness but also of learning sequence composition
-
