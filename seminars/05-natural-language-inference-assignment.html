@@ -1,0 +1,105 @@
+<h1 id="s5-natural-language-inference">S5: Natural language
+inference</h1>
+<p>This assignment is a part of the preparation for the seminar on 27
+May.</p>
+<p>Please have a look <a
+href="https://canvas.gu.se/courses/51974/pages/seminar-assignments-and-discussions">here</a>
+for how to prepare for the seminar.</p>
+<p>In this seminar we return the question of natural language inference
+(NLI): what do mean by natural language inference, how it is modelled in
+distributional representations using neural networks and how does the
+notion of inference captured in these models relate to the notion of
+inference we model with logic-based approaches, theorem provers and
+models builders.</p>
+<p>In this seminar we will look at the following two papers:</p>
+<ul>
+<li>S. R. Bowman, G. Angeli, C. Potts, and C. D. Manning. <a
+href="https://www.aclweb.org/anthology/D15-1075/">A large annotated
+corpus for learning natural language inference.</a> In Proceedings of
+the 2015 Conference on Empirical Methods in Natural Language Processing
+(EMNLP). Association for Computational Linguistics, 2015.
+<ul>
+<li>A. Talman, A. Yli-Jyrä, and J. Tiedemann. <a
+href="https://gu-se-primo.hosted.exlibrisgroup.com/permalink/f/15agpbr/TN_cambridgeS1351324919000202">Sentence
+embeddings in NLI with iterative refinement encoders.</a> Natural
+Language Engineering, 25(4):467–482, 2019.</li>
+<li>Optional additional reading and helpful background:
+<ul>
+<li><strong>Tutorial with video:</strong> S. Bowman and X. Zhu. <a
+href="https://www.aclweb.org/anthology/N19-5002">Deep learning for
+natural language inference.</a> In Proceedings of the 2019 Conference of
+the North American Chapter of the Association for Computational
+Linguistics: Tutorials, pages 6–8, Minneapolis, Minnesota, June 2019.
+Association for Computational Linguistics.</li>
+<li>A. Conneau, D. Kiela, H. Schwenk, L. Barrault, and A. Bordes. <a
+href="http://arxiv.org/abs/1705.02364">Supervised learning of universal
+sentence representations from natural language inference data.</a>
+arXiv, arXiv:1705.02364 [cs.CL]:1–12, 2017.</li>
+<li>S. Hewitt. <a
+href="https://www.oreilly.com/content/textual-entailment-with-tensorflow/">Textual
+entailment with TensorFlow: Using neural networks to explore natural
+language.</a> Tutorial and code, O’Reilly and TensorFlow, July
+2017.</li>
+<li>R. Cooper, D. Crouch, J. Van Eijck, C. Fox, J. Van Genabith, J.
+Jaspars, H. Kamp, D. Milward, M. Pinkal, M. Poesio, et al. Using the
+framework. Technical report, Technical Report LRE 62-051 D-16, The
+FraCaS Consortium, 1996. <a
+href="ftp://ftp.cogsci.ed.ac.uk/pub/FRACAS/del16.ps.gz"
+class="uri">ftp://ftp.cogsci.ed.ac.uk/pub/FRACAS/del16.ps.gz</a></li>
+<li>Y. Bizzoni and S. Dobnik. <a
+href="https://gup.ub.gu.se/publication/249970">Distributional semantic
+models for detection of textual entailment.</a> In J. Björklund and S.
+Stymne, editors, Proceedings of the Sixth Swedish language technology
+conference (SLTC), pages 1–5, Umeå, 17–18 November 2016.
+Umeå University.</li>
+<li>S. Chatzikyriakidis, R. Cooper, S. Dobnik, and S. Larsson. <a
+href="https://gup.ub.gu.se/publication/257683?lang=en">An overview of
+natural language inference data collection: The way forward?</a> In C.
+Gardent and C. Retoré, editors, Proceedings of IWCS 2017: 12th
+International Conference on Computational Semantics, Workshop on
+Computing Natural Language Inference, pages 1–6, Montpellier, France,
+19–22 September 2017. Association for Computational Linguistics.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>The first paper discusses a collection of corpus for natural language
+inference. The second paper provides a survey of approaches to NLI and
+presents a a solution where a neural language model is used to model
+inference. It also includes an evaluation of the model on different
+grammatical constructions.</p>
+<p>Below are some points that you may want to consider when reading
+these papers:</p>
+<p>For the first paper:</p>
+<ul>
+<li>Consider the notion of inference that is taken here when collecting
+the data for the dataset. How does this compare to the notion of the
+logical inference introduced in our first module and that is used in <a
+href="http://www-nlp.stanford.edu/~wcmac/downloads/fracas.xml">the
+FraCaS dataset</a>?</li>
+<li>Why image scene descriptions are used; and why the images are not
+shown to the describers?</li>
+<li>The paper tests the collected dataset on existing NLI systems. From
+description and a discussion of results, what do you think are there
+strengths and weakness of each when modelling inference?</li>
+</ul>
+<p>For the second paper:</p>
+<ul>
+<li>The NLI task involves training a neural network to predict one of
+the inference relations. Why is this task important for natural language
+processing / computational linguistics / language technology?</li>
+<li>In Figure 1 we see a general model architecture. What are the
+motivation behind different combinations of representations of sentence
+1 and sentence 2, <em>u</em> and <em>v</em>?</li>
+<li>What is the reason for using a hierarchy of LSTM layers in the
+proposed model HBMP?</li>
+<li>In the second part of the paper the authors test the models on
+different datasets and linguistic constructions. What can we conclude
+(advantages and disadvantages) about the ability of neural networks to
+model natural language inference based on this analysis? What can we
+conclude about natural language inference itself?</li>
+</ul>
+<p>The assignment is marked with complete/incomplete with a further
+feedback on a 7 level scale where 4 is sufficient to complete the
+assignment; 5 is good solid work; 6 is excellent work that covers most
+of the assignment; and 7 is creative work that goes beyond the
+assignment.</p>
