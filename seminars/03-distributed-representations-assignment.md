@@ -1,8 +1,8 @@
 # S3: Distributed representations
 
-This assignment is a part of the preparation for the seminar on 29 April.
+This assignment is a part of the preparation for the seminar on 27 April.
 
-Please have a look [here](https://canvas.gu.se/courses/51974/pages/seminar-assignments-and-discussions) for how to prepare for the seminar.
+Please have a look [here](https://canvas.gu.se/courses/64394/pages/seminar-assignments-and-discussions) for how to prepare for the seminar.
 
 In this seminar we will look at how we can learn distributed meaning representations and language models using neural networks. Similarly to the previous seminar we will discuss what semantic knowledge these representations capture and how do they relate to the notion of compositionality.
 
@@ -21,8 +21,8 @@ Below are some points that you may want to consider when reading these papers.
 For the first paper:
 
 * Some concepts: syntagmatic and paradigmatic relations, one-hot vector representation, dense embeddings, word2vec, CBOW, skip-gram, Gensim, GloVe, LSTM
-* What is the difference between word embeddings, dsitributional word vectors/matrices and word vectors with dimensionality reduction?
-* What are the benefits and weaknesses of using word embeddings compared to other representations mentioned in the previous point both in terms of the nature of representation and computational cost building and using them?
+* What is the difference between distributional word vectors/matrices, word vectors with dimensionality reduction and word embeddings?
+* What are the benefits and weaknesses of using word embeddings compared to other word representations mentioned in the previous point both in terms of the nature of representation and computational cost building and using them?
 * What kind of word embeddings can we build; what are differences between?
 * What is a probabilistic language model? How do word embeddings relate to a probabilistic language model?
 
@@ -36,3 +36,5 @@ For the second paper:
 * To what degree can we say that a neural network has learned compositional functions like those in formal semantics?
 
 The assignment is marked with complete/incomplete with a further feedback on a 7 level scale where 4 is sufficient to complete the assignment; 5 is good solid work; 6 is excellent work, covers most of the assignment; and 7: creative work that goes beyond the assignment.
+
+<https://canvas.gu.se/courses/64394/assignments/210878>
