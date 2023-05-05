@@ -1,4 +1,4 @@
-## 2021-04-28 Distributed representations
+## Distributed representations
 
 Y. Bengio, R. Ducharme, P. Vincent, and C. Janvin. [A neural probabilistic language model.](https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf) Journal of Machine Learning Research, 3(6):1137–1155, 2003.
 
@@ -60,10 +60,10 @@ On Ghanimifard and Dobnik's paper
   * Language models also learn to predict sequences / compositions of words: is this also reflected at the level of grounding; are constituents grounded as expected?
 * Approach
   * Spatial templates from Logan and Sadler, what are spatial templates?\
-    ![03-spatial-templates-from-logan-and-sadler.png](03-spatial-templates-from-logan-and-sadler.png?fileId=458063#mimetype=image%2Fpng&hasPreview=true)
+    ![03-spatial-templates-from-logan-and-sadler.jpg](03-spatial-templates-from-logan-and-sadler.jpg)
   * 7x7 grid and we have an average acceptability score for each cell; acceptability scores can be assumed to be probabilities; from these probabilities we generate a dataset by generating the number of individual examples per location proportional to the probability
   * spatial templates are available only for individual spatial relations; define artificial compositional functions for phrases: *and*, *either*, *or*, *not* mostly using mathematical functions on the spatial templates, e.g. prodct, complement, etc.
-  * dataset one: simple and composed relations; dataset two: also other words (*v*∗) → [“*the*”, “*ob ject*”, “*is*”, *v*∗, “*the*′′, “*box*′′]
+  * dataset one: simple and composed relations; dataset two: also other words (v) --> [the, object, is, v, the, box]
   * LSTM language model; the location vector is concatendated with the embedding vector
     * why not take product or other functions?
   * we get softmax predictions for all of the words; we do not need decoding since for spatial relations we are taking the probabilities of all relations and compare them with the original spatial templates
@@ -118,5 +118,3 @@ Terry Regier: Human semantic potential
   * training such models now and then
   * higher cost of training vs collecting counts
   * how do neural models capture different languages: direction of writing and morphology
-
-### 
