@@ -6,13 +6,14 @@ from torchtext.data import Field, BucketIterator, Iterator, TabularDataset
 from IPython import embed
 import numpy as np
 
+# for GPU: cuda:INT
 device = torch.device('cpu')
 
 def main():
-    train_iter, test_iter, words, labels = get_data()
+    train_iter, test_iter, words_v, labels_v = get_data()
 
-    num_words  = len(words.vocab)
-    num_labels = len(labels.vocab)
+    num_words  = len(words_v.vocab)
+    num_labels = len(labels_v.vocab)
 
     ## create model, optimizer and loss function
     model = PosModel(num_words, num_labels, 50, 50).to(device)
@@ -35,11 +36,12 @@ def main():
         for i, batch in enumerate(train_iter):
             sentences = batch.tokens
             labels    = batch.labels
-
+            
             # run sentences through the model
             output = model(sentences)
-
+            
             #embed()
+            #assert False
 
             # computer loss
             # output: from (B, L, C) to (B*L, C)
@@ -130,7 +132,7 @@ def get_data():
                                                              'quotechar':'½'})
 
     # build vocabularies based on what our csv files contained and create word2id mapping
-    TOKENS.build_vocab(train, min_freq=3)
+    TOKENS.build_vocab(train)
     LABELS.build_vocab(train)
 
     # create batches from our data, and shuffle them for each epoch
@@ -142,7 +144,6 @@ def get_data():
                                                   device            = device)
 
     return train_iter, test_iter, TOKENS, LABELS
-
 
 if __name__ == '__main__':
     main()
