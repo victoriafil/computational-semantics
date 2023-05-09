@@ -2,37 +2,32 @@
 
 S. Clark. [Vector space models of lexical meaning.](https://canvas.gu.se/courses/64394/files/7167380?wrap=1) In S. Lappin and C. Fox, editors, Handbook of Contemporary Semantics — second edition, chapter 16, pages 493–522. Wiley – Blackwell, 2015.
 
-
-
 ### Questions to discuss
 
 On vector space models:
 
-  - What notion of meaning is represented by distributional representations?
-      - What semantic relations do they capture?
-      - How do these relate to the semantic relations we intuitively recognise in natural language?
-      - Are there relations that they do not capture?
-      - Think of examples in natural language that can modelled well with distributional relations and examples that cannot be.
-  - How does this notion of meaning different from that taken in model-theoretic semantics that we looked at earlier?
-      - Sense and reference?
-  - What are the main ... for representing meaning of natural language this way?
-      - benefits
-      - challenges
-      - limitations (and dangers!)
-  - What computational resources, tools and methods do we use to create these representations?
-  - For what tasks can we use these representations? For what tasks we cannot use them?
-  - What would be alternative representations?
-
+* What notion of meaning is represented by distributional representations?
+  * What semantic relations do they capture?
+  * How do these relate to the semantic relations we intuitively recognise in natural language?
+  * Are there relations that they do not capture?
+  * Think of examples in natural language that can modelled well with distributional relations and examples that cannot be.
+* How does this notion of meaning different from that taken in model-theoretic semantics that we looked at earlier?
+  * Sense and reference?
+* What are the main ... for representing meaning of natural language this way?
+  * benefits
+  * challenges
+  * limitations (and dangers!)
+* What computational resources, tools and methods do we use to create these representations?
+* For what tasks can we use these representations? For what tasks we cannot use them?
+* What would be alternative representations?
 
 On compositionality:
 
-  - What are the reasons and benefits of combining formal representations with distributional ones?
-  - What do you think are the biggest challenges of such hybrid models and representations?
-  - To what degree can we interpret distributional representations?
-      - How does this relate to how well a mapping between two types of representations can be achieved?
-  - There are several different ways to write a formal grammar. How would this affect the mapping?
-
-
+* What are the reasons and benefits of combining formal representations with distributional ones?
+* What do you think are the biggest challenges of such hybrid models and representations?
+* To what degree can we interpret distributional representations?
+  * How does this relate to how well a mapping between two types of representations can be achieved?
+* There are several different ways to write a formal grammar. How would this affect the mapping?
 
 ### Simon's notes
 
@@ -42,7 +37,7 @@ On compositionality:
 * Vector space models and information retrieval
 * Basis vector identify dimensions (in comparison to the actual vectors for words that we compare)
 * TF/IDF: counter the problem that some words are generally more frequent than others, divide by the number of documents the word occurs in (or multiply by the 1/DF
-  - see [Karen Spärck Jones](https://en.wikipedia.org/wiki/Karen_Spärck_Jones)
+  * see [Karen Spärck Jones](https://en.wikipedia.org/wiki/Karen_Sp%C3%A4rck_Jones)
 * PMI: another method that measures the strength of association: how often two events co-occur compared to how often they occur independently, see J&M Chapter 6; related to log-likelihood ratio and KL-Divergence, see here <https://stats.stackexchange.com/questions/179010/difference-between-pointwise-mutual-information-and-log-likelihood-ratio>
 * Normalise the dot product by the length of the documents and hence we get an equation for cosine
   * compare with the tensor product later
@@ -70,7 +65,7 @@ On compositionality:
 * As composition is applied the semantic types are becoming smaller, i.e. chasing cat events
 * How do we evaluate compositions? Inference
 
-_"Even taking account of laudable attempts such as Bos & Markert (2006), building on earlier work such as Alshawi (1992), it is probably fair to say that the classical logic-based enterprise in natural language processing has failed."_
+*"Even taking account of laudable attempts such as Bos & Markert (2006), building on earlier work such as Alshawi (1992), it is probably fair to say that the classical logic-based enterprise in natural language processing has failed."*
 
 Interesting references
 
@@ -83,13 +78,35 @@ Chapter 6 Vector semantics and embeddings. D. Jurafsky and J. H. Martin. [Speech
 
 M. Baroni. [Composition in distributional semantics.](https://doi-org.ezproxy.ub.gu.se/10.1111/lnc3.12050) Language and Linguistics Compass, 7(10):511–522, 2013.
 
-
-
 ### From the class, VT23
 
-  - 
-
-
+* (Blue) Relations that cannot be captured:
+  * metaphors, mapping between semantic domains, target and source
+  * humour
+  * irony
+  * cultural knowledge
+  * metaphors and literal words; X is an angel; love is a journey, X is going to explode; polysemy; 
+* Combining frameworks: distributional semantics, multi-modality, FrameNet
+  * vector databases, knowledge graphs, edges
+  * combining modalities; aligning (Purple)
+  * mapping between formal and distirbutional representations; how the mapping is done? (Purple)
+* (Green) Corpus dependence and types of representations
+  * ethical issues, e.g. hate speech
+  * checking data imposssible/hard
+  * contexts in which words are used is reflected in documents, assuming a uniform language use
+  * words not in a corpus are not represented
+  * also an issue with language models (Orange), relation between vectors and ML models
+* (Red) Large English data
+  * communities where words are used differently
+* (Purple), see above
+* (Orange), see above
+* Tensor product
+  * [b, a]  *[c, d] -->* [b\*c, b\*d, a\*c, a\*d]
+  * [2, 3] [3,1] --> [2\*3, 2\*1, 3\*3, 3\*1] = [6, 2, 9, 3]
+  * 2^n dimensions
+  * see the linguistic example in the paper
+* See on the differences between dot product, tensor product below
+* (Grey) reference from the research paper ( Logical negation is a challenge for distributional semantics, because predicates and their negations tend to occur in very similar contexts, and consequently their distributional vectors are very similar. Indeed, it is not even clear what properties a “negated” distributional vector should possess
 
 ### From the class, VT22
 
@@ -112,8 +129,6 @@ M. Baroni. [Composition in distributional semantics.](https://doi-org.ezproxy.ub
   * complementary distribution: connecting with logic
   * distributional and logic representations and context: arguments and word contexts?
   * other formal grammars: CCG
-
-
 
 ### From the class, VT21
 

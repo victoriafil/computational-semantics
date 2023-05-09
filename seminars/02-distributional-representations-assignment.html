@@ -1,0 +1,135 @@
+<h1 id="s2-distributional-representations">S2: Distributional
+representations</h1>
+<p>This assignment is a part of the preparation for the seminar on 13
+April.</p>
+<p>Please have a look <a
+href="https://canvas.gu.se/courses/64394/pages/seminar-assignments-and-discussions">here</a>
+for how to prepare for the seminar.</p>
+<p>In this seminar we will examine distributional representations of
+lexical meaning as modelled by vector space models and how these
+representations can be linked to <em>compositionality</em> of lexical
+items in phrases which we identified as one of the key properties of
+natural language. What do we mean by distributional meaning? How do we
+build vector space models computationally from corpora? How we
+generalise such representations? How we can compose the semantic vectors
+to get representations of phrases?</p>
+<p>We will look at the following paper (or rather a chapter):</p>
+<ul class="incremental">
+<li><p>S. Clark. <a
+href="https://canvas.gu.se/courses/64394/files/7167380?wrap=1">Vector
+space models of lexical meaning.</a></p></li>
+<li><p><a
+href="https://canvas.gu.se/courses/64394/files/7167380/download?download_frd=1">Download
+Vector space models of lexical meaning.</a> In S. Lappin and C. Fox,
+editors, Handbook of Contemporary Semantics — second edition, chapter
+16, pages 493–522. Wiley – Blackwell, 2015.</p></li>
+</ul>
+<p>Optional but helpful background and further reading:</p>
+<ul class="incremental">
+<li><p>K. Erk. <a
+href="https://gu-se-primo.hosted.exlibrisgroup.com/permalink/f/15agpbr/TN_wj10.1002/lnco.362">Vector
+space models of word meaning and phrase meaning: A survey.</a></p></li>
+<li><p><a
+href="https://gu-se-primo.hosted.exlibrisgroup.com/permalink/f/15agpbr/TN_wj10.1002/lnco.362">Links
+to an external site.</a> Language and Linguistics Compass,
+6(10):635–653, 2012.</p></li>
+<li><p>P. D. Turney, P. Pantel, et al. <a
+href="http://dx.doi.org/10.1613/jair.2934">From frequency to meaning:
+Vector space models of semantics.</a></p></li>
+<li><p><a href="http://dx.doi.org/10.1613/jair.2934">Links to an
+external site.</a> Journal of artificial intelligence research,
+37(1):141–188, 2010.</p></li>
+<li><p>J. Mitchell and M. Lapata. <a
+href="https://www.aclweb.org/anthology/P08-1028/">Vector-based models of
+semantic composition.</a></p></li>
+<li><p><a href="https://www.aclweb.org/anthology/P08-1028/">Links to an
+external site.</a> In Proceedings of ACL-08: HLT, pages 236–244,
+Columbus, Ohio, 2008.</p></li>
+<li><p>J. Mitchell and M. Lapata. <a
+href="http://dx.doi.org/10.1111/j.1551-6709.2010.01106.x">Composition in
+distributional models of semantics.</a></p></li>
+<li><p><a
+href="http://dx.doi.org/10.1111/j.1551-6709.2010.01106.x">Links to an
+external site.</a>  Cognitive Science, 34(8):1388–1429, 2010.</p></li>
+<li><p>E. M. Bender and A. Koller. <a
+href="https://www.aclweb.org/anthology/2020.acl-main.463">Climbing
+towards NLU: On meaning, form, and understanding in the age of
+data.</a></p></li>
+<li><p><a
+href="https://www.aclweb.org/anthology/2020.acl-main.463">Links to an
+external site.</a> In Proceedings of the 58th Annual Meeting of the
+Association for Computational Linguistics, pages 5185–5198, Online, July
+2020. Association for Computational Linguistics.</p></li>
+<li><p>S. Dobnik, R. Cooper, A. Ek, B. Noble, S. Larsson, N. Ilinykh, V.
+Maraev, and V. Somashekarappa. <a
+href="https://aclanthology.org/2022.clasp-1.4/">In search of meaning and
+its representations for computational linguistics.</a></p></li>
+<li><p><a href="https://aclanthology.org/2022.clasp-1.4/">Links to an
+external site.</a> In Proceedings of the 2022 CLASP Conference on
+(Dis)embodiment, pages 30–44, Gothenburg, Sweden, Sept. 2022.
+Association for Computational Linguistics.</p></li>
+</ul>
+<p>The Clark chapter has two parts. The first part discusses the basics
+of the vector spaces; how they are built, evaluated and in what tasks
+they can be used for. The second part discusses one approach of
+combining a formal semantic grammar (Combinatory category grammar, CCG)
+and vector representations. You can think of CCG as lambda calculus. The
+proposal uses a dual system of composition: formal compositional rules
+over categories are matched with a distributional compositional rules
+that operate on distributional tensors/matrices.</p>
+<p>The optional papers: (i) Erk and Turney and Pantel give a general
+overview of vector spaces. Mitchel and Lapata test different
+compositional functions for vectors and compare them to human
+judgements. Bender and Koller discuss limitations of using
+distributional representations for natural language processing. In our
+paper we discuss different representations of meaning used in natural
+language processing.</p>
+<p>Below are some points that you may want to consider:</p>
+<p>On vector space models:</p>
+<ul class="incremental">
+<li>What notion of meaning is represented by distributional
+representations?
+<ul class="incremental">
+<li>What semantic relations do they capture?</li>
+<li>How do these relate to the semantic relations we intuitively
+recognise in natural language?</li>
+<li>Are there relations that they do not capture?</li>
+<li>Think of examples in natural language that can modelled well
+with distributional relations and examples that cannot be.</li>
+</ul></li>
+<li>How does this notion of meaning different from that taken in
+model-theoretic semantics that we looked at earlier?
+<ul class="incremental">
+<li>Sense and reference?</li>
+</ul></li>
+<li>What are the main … for representing meaning of natural language
+this way?
+<ul class="incremental">
+<li>benefits</li>
+<li>challenges</li>
+<li>limitations (and dangers!)</li>
+</ul></li>
+<li>What computational resources, tools and methods do we use to create
+these representations?</li>
+<li>For what tasks can we use these representations? For what tasks we
+cannot use them?</li>
+<li>What would be alternative representations?</li>
+</ul>
+<p>On compositionality:</p>
+<ul class="incremental">
+<li>What are the reasons and benefits of combining formal
+representations with distributional ones?</li>
+<li>What do you think are the biggest challenges of such hybrid models
+and representations?</li>
+<li>To what degree can we interpret distributional representations?
+<ul class="incremental">
+<li>How does this relate to how well a mapping between two types of
+representations can be achieved?</li>
+</ul></li>
+<li>There are several different ways to write a formal grammar. How
+would this affect the mapping?</li>
+</ul>
+<p>The assignment is marked on a 7 level scale where 4 is sufficient to
+complete the assignment; 5 is good solid work; 6 is excellent work,
+covers most of the assignment; and 7: creative work that goes beyond the
+assignment.</p>
